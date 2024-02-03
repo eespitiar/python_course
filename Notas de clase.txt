@@ -1,6 +1,46 @@
-Hay una página web útil para crear el archivo .gitignore. Esta herramienta es 
-gitignore.io (https://www.toptal.com/developers/gitignore). Allí, ponemos "Windows",
-"Linux", "macOS" y "python", y copiamos el resultado en nuestro archivo .gitignore.
+#############################
+#   Herramienta .gitignore  # 
+#############################
+
+    -Hay una página web útil para crear el archivo .gitignore. Esta herramienta es 
+    gitignore.io (https://www.toptal.com/developers/gitignore). Allí, ponemos "Windows",
+    "Linux", "macOS" y "python", y copiamos el resultado en nuestro archivo .gitignore.
 
 
-Para ver que librerias tenemos instaladas, podemos usar el comnado pip3 freeze
+#########################
+#   Comandos para pip   #
+#########################
+
+-Para ver que librerias tenemos instaladas, podemos usar el comnado pip3 freeze
+
+
+#########################
+#   Ambientes Virtuales #
+#########################
+
+- which python3                 Nos dice de donde se está ejecutanto ese python
+- which pip3                    Nos dice de donde se está ejecutanto ese pip
+
+- apt install -y python3-venv   Es un paquete que necesitamos para los ambientes virtuales
+
+
+## Para crear un ambiente virtual:
+
+- Vamos a la carpete en donde queremos crear el ambiente virtual
+- ejecutamos: python3 -m venv mi_ambiente
+- Luego, activamos el ambiente con: source mi_ambiente/bin/activate (A veces no está la carpta bin, pero está la carpeta lib o algo así. Lo importante es buscar "activate")
+- Si corremos "which python3", vemos que se está ejecutando desde nuestro nuevo ambiente
+- Analogamente, con "which pip3", vemos que pip también se está ejecutando desde nuestro nuevo ambiente
+- Con: "pip install matplotlib", instalamos la librería matplotlib
+- Con: "pip install matplotlib==3.5.0", instalamos la librería matplotlib en su versión 3.5.0
+- Con: "pip3 freeze" vemos los paquetes que tenemos en este ambiente.
+- Para salir del ambiende ejecutamos: deactivate
+
+
+## Archivo requirements.txt
+
+- Con: "pip freeze > requirements.txt", creamos un archivo llamado requirements.txt, el cual va a tener en su interior la salida del comando "pip freeze". Esto es, va a contener los paquetes del ambiente con su respectiva versión.
+
+- Así, una persona nueva en el proyecot puede utilizar el comando "pip install -r requirements.txt" para installar todos los paquetes que pusimos en el archivo "requirements.txt" en sus respectivas versiones.
+
+
