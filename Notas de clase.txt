@@ -1,3 +1,6 @@
 Hay una página web útil para crear el archivo .gitignore. Esta herramienta es 
 gitignore.io (https://www.toptal.com/developers/gitignore). Allí, ponemos "Windows",
 "Linux", "macOS" y "python", y copiamos el resultado en nuestro archivo .gitignore.
+
+
+Para ver que librerias tenemos instaladas, podemos usar el comnado pip3 freeze
